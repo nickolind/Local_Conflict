@@ -1,0 +1,33 @@
+﻿disableChannels[]	= {2,4,5};
+enableDebugConsole	= 1;
+forceRotorLibSimulation = 1;
+
+corpseLimit 		= 1;
+// corpseLimit 		= 15;
+corpseRemovalMinTime= 300;
+wreckLimit			= 1;
+// wreckLimit			= 10;
+wreckRemovalMinTime = 300;
+
+disabledAI 			= 1;
+respawn 			= 3;
+respawnDelay		= 300;
+respawnOnStart 		= 1;
+// respawnTemplates[] = {"MenuPosition"};
+
+
+onLoadName = "Local Conflict: Panthera";
+author = "Nickorr";
+// overviewPicture = "logo.jpg";
+// overviewText = "";
+
+class Header
+{
+	gameType=RPG;
+	minPlayers=1;
+	maxPlayers=100;
+};
+class WMT_Param 
+{
+CampaignBriefingMode = 1;
+};
