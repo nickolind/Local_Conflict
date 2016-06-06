@@ -16,8 +16,8 @@ respawnOnStart 		= 1;
 // respawnTemplates[] = {"MenuPosition"};
 
 
-onLoadName = "Local Conflict: Panthera";
-author = "Nickorr";
+// onLoadName = "Local Conflict: Panthera";
+// author = "Nickorr";
 // overviewPicture = "logo.jpg";
 // overviewText = "";
 

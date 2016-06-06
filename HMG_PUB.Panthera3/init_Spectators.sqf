@@ -21,7 +21,7 @@ NSA_hp_Spectators = [];
 	
 	if ( ({side group _x == _y} count NSA_hp_Spectators) == 0 ) then {
 		_marker = "respawn_"+str(_x);
-		_type = (["rhs_msv_officer_armored","rhsusf_usmc_marpat_wd_squadleader","I_G_Soldier_SL_F"] select _forEachIndex);
+		_type = (NSA_hp_stdSpecSoldierClassnames select _forEachIndex);
 		_randAng = random 360;
 		_pos = [
 			((getMarkerPos _marker) select 0) + ((cos _randAng) * (1 max (getMarkerSize _marker select 0) * 3 / 4)),

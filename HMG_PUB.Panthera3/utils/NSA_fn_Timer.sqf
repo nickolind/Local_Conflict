@@ -54,10 +54,6 @@ Actions:
 
 
 
-
-NSA_Timer = compile preprocessFileLineNumbers "NSA_Timer.sqf";
-
-
 private ["_timerName","_timerAction","_ttw","_return","_errorReporter","_timeRunner"];
 
 _timerName = _this select 0;
@@ -84,7 +80,7 @@ _timeRunner = {
 	_time = serverTime;
 	_timerID = -1;
 
-	while {(_timeLeft > 0) && (_state == 1)} do {
+	while {(_timeLeft > 0)} do {
 		_curTimer = [_timerName, "get"] call NSA_Timer;		// [ID, ["Name",ttw, timeLeft, state]]
 		_timerID = _curTimer select 0;						// ID
 		_curTimer = _curTimer select 1;						// ["Name",ttw, timeLeft, state]

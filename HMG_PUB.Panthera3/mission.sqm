@@ -8,7 +8,7 @@ class EditorData
 	toggles=545;
 	class ItemIDProvider
 	{
-		nextID=168;
+		nextID=181;
 	};
 	class MarkerIDProvider
 	{
@@ -16,25 +16,124 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=82;
+		nextID=181;
 	};
 	class Camera
 	{
-		pos[]={8015.9575,25.653118,1918.9308};
-		dir[]={0.21138059,-0.43787757,0.87384933};
-		up[]={0.10295285,0.89903164,0.42560714};
-		aside[]={0.97197956,6.4082997e-009,-0.23511811};
+		pos[]={7369.0884,182.99916,3846.625};
+		dir[]={0.57337821,-0.31359944,0.75704694};
+		up[]={0.18936305,0.94952697,0.2500219};
+		aside[]={0.7972554,2.3414323e-006,-0.60383165};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"hmg_ru_groups",
-	"rhs_c_btr",
 	"WMT_Main",
 	"ace_weather",
+	"A3_Ui_F",
 	"rhs_c_troops",
-	"rhsusf_c_troops"
+	"rhs_c_weapons",
+	"ace_compat_rhs_afrf3",
+	"A3_Weapons_F",
+	"ace_optics",
+	"A3_Weapons_F_Items",
+	"ace_medical",
+	"rhsusf_c_troops",
+	"rhs_c_btr",
+	"rhs_c_bmp",
+	"A3_Modules_F",
+	"Desert"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=15;
+		class Item0
+		{
+			className="hmg_ru_groups";
+			name="hmg_ru_groups";
+		};
+		class Item1
+		{
+			className="WMT_Main";
+			name="WMT_Main";
+		};
+		class Item2
+		{
+			className="ace_weather";
+			name="ace_weather";
+		};
+		class Item3
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item4
+		{
+			className="rhs_c_troops";
+			name="rhs_c_troops";
+		};
+		class Item5
+		{
+			className="rhs_c_weapons";
+			name="rhs_c_weapons";
+			author="RHS";
+		};
+		class Item6
+		{
+			className="ace_compat_rhs_afrf3";
+			name="ace_compat_rhs_afrf3";
+		};
+		class Item7
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item8
+		{
+			className="ace_optics";
+			name="ace_optics";
+		};
+		class Item9
+		{
+			className="ace_medical";
+			name="ace_medical";
+		};
+		class Item10
+		{
+			className="rhsusf_c_troops";
+			name="rhsusf_c_troops";
+		};
+		class Item11
+		{
+			className="rhs_c_btr";
+			name="rhs_c_btr";
+		};
+		class Item12
+		{
+			className="rhs_c_bmp";
+			name="rhs_c_bmp";
+		};
+		class Item13
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item14
+		{
+			className="Desert";
+			name="Desert";
+		};
+	};
 };
 randomSeed=14377143;
 class ScenarioData
@@ -137,6 +236,7 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="Local Conflict: Panthera - v0.2";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.1;
@@ -158,7 +258,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=15;
 		class Item0
 		{
 			dataType="Group";
@@ -253,31 +353,14 @@ class Mission
 		};
 		class Item1
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8007.1528,11.927167,1959.9781};
-				angles[]={0,2.1216068,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=3;
-			type="rhs_btr80a_vdv";
-			atlOffset=-0.00039863586;
-		};
-		class Item2
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9572.0811,7.6293945e-006,807.69604};
+				position[]={9599.7607,0,799.67798};
 			};
 			id=5;
 			type="WMT_Main";
-			atlOffset=29.770008;
+			atlOffset=29.77;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -447,7 +530,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=2000;
+							value=2500;
 						};
 					};
 				};
@@ -473,12 +556,12 @@ class Mission
 				nAttributes=10;
 			};
 		};
-		class Item3
+		class Item2
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9620,0,808};
+				position[]={9700.2432,0,800.8197};
 			};
 			id=6;
 			type="ace_weather_ModuleSettings";
@@ -602,7 +685,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item4
+		class Item3
 		{
 			dataType="Group";
 			side="East";
@@ -694,7 +777,7 @@ class Mission
 			id=14;
 			atlOffset=-9.5367432e-007;
 		};
-		class Item5
+		class Item4
 		{
 			dataType="Layer";
 			name="WEST";
@@ -729,7 +812,7 @@ class Mission
 						{
 							dataType="Marker";
 							position[]={2364,-17.990234,3488};
-							name="mrk_Base_WEST";
+							name="mrkzKT_WEST_Base";
 							text="BASE_KT_Inn";
 							markerType="ELLIPSE";
 							type="mil_triangle";
@@ -781,7 +864,7 @@ class Mission
 			id=26;
 			atlOffset=-7.1721678;
 		};
-		class Item6
+		class Item5
 		{
 			dataType="Layer";
 			name="EAST";
@@ -833,7 +916,7 @@ class Mission
 						{
 							dataType="Marker";
 							position[]={8002.3008,10.28,1946.8146};
-							name="mrk_Base_EAST";
+							name="mrkzKT_EAST_Base";
 							text="BASE_KT_Inn";
 							markerType="ELLIPSE";
 							type="mil_triangle";
@@ -1136,7 +1219,7 @@ class Mission
 			id=27;
 			atlOffset=4.5609999;
 		};
-		class Item7
+		class Item6
 		{
 			dataType="Layer";
 			name="RESISTANCE";
@@ -1154,7 +1237,7 @@ class Mission
 			id=37;
 			atlOffset=29.77;
 		};
-		class Item8
+		class Item7
 		{
 			dataType="Layer";
 			name="CapturePoints";
@@ -1189,25 +1272,6 @@ class Mission
 						class Item2
 						{
 							dataType="Marker";
-							position[]={5532.0005,110.91001,3576.0002};
-							name="pa_2";
-							text="['Name', [50,50], ['pa_1', 'pa_3']] ";
-							type="Empty";
-							id=46;
-							atlOffset=7.6293945e-006;
-						};
-						class Item3
-						{
-							dataType="Marker";
-							position[]={5404,5.6640019,3888};
-							name="pa_3";
-							text="['Name', [40,40], ['pa_1', 'pa_2']] ";
-							type="Empty";
-							id=49;
-						};
-						class Item4
-						{
-							dataType="Marker";
 							position[]={6760.9761,56.574585,4172.3887};
 							name="pa_4";
 							text="['Name', [50,50], ['pa_0']] ";
@@ -1215,9 +1279,29 @@ class Mission
 							id=52;
 							atlOffset=0.084583282;
 						};
+						class Item3
+						{
+							dataType="Marker";
+							position[]={5532.0005,110.91001,3576.0002};
+							name="pa_2";
+							text="['Name', [50,50], ['pa_1', 'pa_3']] ";
+							type="Empty";
+							id=177;
+							atlOffset=7.6293945e-006;
+						};
+						class Item4
+						{
+							dataType="Marker";
+							position[]={5404,5.6779985,3888};
+							name="pa_3";
+							text="['Name', [40,40], ['pa_1', 'pa_2']] ";
+							type="Empty";
+							id=178;
+							atlOffset=0.013996601;
+						};
 					};
 					id=42;
-					atlOffset=27.088732;
+					atlOffset=45.144688;
 				};
 				class Item1
 				{
@@ -1370,9 +1454,9 @@ class Mission
 				};
 			};
 			id=38;
-			atlOffset=-34.368622;
+			atlOffset=-42.972301;
 		};
-		class Item9
+		class Item8
 		{
 			dataType="Marker";
 			position[]={2376.6377,5.1999998,3448.23};
@@ -1380,7 +1464,7 @@ class Mission
 			type="mil_circle";
 			id=129;
 		};
-		class Item10
+		class Item9
 		{
 			dataType="Marker";
 			position[]={2432.4197,5.1999998,3483.6431};
@@ -1391,7 +1475,7 @@ class Mission
 			b=50;
 			id=131;
 		};
-		class Item11
+		class Item10
 		{
 			dataType="Group";
 			side="West";
@@ -1461,6 +1545,373 @@ class Mission
 			{
 			};
 			id=132;
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8006.3789,11.759469,1965.7117};
+				angles[]={0,2.1216047,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=168;
+			type="rhs_btr80_msv";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="wheel_1_unhide";
+					expression="[_this,_value,'wheel_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_ak74m"",""rhs_weap_rpg26"",""rhs_weap_rpg7"",""FirstAidKit"",""Medikit""],[2,2,1,4,1]],[[""rhs_30Rnd_545x39_7N10_AK"",""rhs_10Rnd_762x54mmR_7N1"",""rhs_100Rnd_762x54mmR"",""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag"",""rhs_rpg7_OG7V_mag""],[30,10,3,2,9,20,5,5,2,2]],[[],[]],[[""rhs_sidor"",""rhs_rpg""],[7,1]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="crate_l3_unhide";
+					expression="[_this,_value,'crate_l3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="crate_l2_unhide";
+					expression="[_this,_value,'crate_l2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="crate_r2_unhide";
+					expression="[_this,_value,'crate_r2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="crate_l1_unhide";
+					expression="[_this,_value,'crate_l1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="crate_r1_unhide";
+					expression="[_this,_value,'crate_r1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7993.2349,12.400225,1954.7412};
+				angles[]={0,2.1216047,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=170;
+			type="rhs_bmp1d_msv";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_ak74m"",""rhs_weap_rpg26"",""rhs_weap_rpg7"",""FirstAidKit"",""Medikit""],[2,2,1,4,1]],[[""rhs_30Rnd_545x39_7N10_AK"",""rhs_10Rnd_762x54mmR_7N1"",""rhs_100Rnd_762x54mmR"",""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag"",""rhs_rpg7_OG7V_mag""],[30,10,3,2,9,20,5,5,2,2]],[[],[]],[[""rhs_sidor"",""rhs_rpg""],[7,1]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="crate_l3_unhide";
+					expression="[_this,_value,'crate_l3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="crate_r3_unhide";
+					expression="[_this,_value,'crate_r3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="wood_2_unhide";
+					expression="[_this,_value,'wood_2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="crate_l2_unhide";
+					expression="[_this,_value,'crate_l2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="crate_r2_unhide";
+					expression="[_this,_value,'crate_r2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="wood_1_unhide";
+					expression="[_this,_value,'wood_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="crate_l1_unhide";
+					expression="[_this,_value,'crate_l1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="crate_r1_unhide";
+					expression="[_this,_value,'crate_r1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
+		class Item13
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9500.4209,-29.77,800.24902};
+			};
+			name="GameLogicVars";
+			init="NSA_hp_dawn_dusk = [[6,52],[15,19]]; " \n "comment ""format: [dawnTime, duskTime ] -- явное указание значений восхода и заката для миссии. Иначе будет вычисляться автоматически (точность хромает)."";";
+			id=179;
+			type="Logic";
+		};
+		class Item14
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={9500.1357,-29.77,837.12524};
+			};
+			title="GameLogicVars_c";
+			description="NSA_hp_dawn_dusk = [[6,52],[15,19]]; " \n "comment ""format: [dawnTime, duskTime ] -- явное указание значений восхода и заката для миссии. Иначе будет вычисляться автоматически (точность хромает)."";";
+			id=180;
 		};
 	};
 };

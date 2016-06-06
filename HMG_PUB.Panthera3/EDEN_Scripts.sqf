@@ -432,7 +432,12 @@ null = ["spawn_AllFoundObjs"] execVM "EDEN_Scripts.sqf";
 null = ["test"] execVM "EDEN_Scripts.sqf";
 */
 	case "test": {
-		
+	
+	
+
+	
+	
+	
 	};
 
 /* --------------------------------------------------------------------- */	

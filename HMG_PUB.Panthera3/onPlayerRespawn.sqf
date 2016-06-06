@@ -25,7 +25,7 @@ _newPlayer allowDamage false;
 [] spawn {
 	sleep 5;
 	
-	[] spawn NSA_hp_Base_AllowDamage;
+	[] spawn NSA_hp_Base_AllowDamage_Player;
 };
 
 

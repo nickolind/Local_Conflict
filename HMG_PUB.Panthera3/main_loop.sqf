@@ -4,40 +4,40 @@
 
 
 
-[_gamePrepareTime, _roundTime, _respawnWave] spawn NSA_hp_main_loop;
+[NSA_param_gamePrepareTime, NSA_param_roundTime, NSA_param_respawnWave] spawn NSA_hp_main_loop;
 
 */
-
-private ["_gamePrepareTime","_roundTime","_respawnWave"];
-													// NSA_hp_GameStarted -->  			120
-													// NSA_hp_roundTime -->  			2400	(40mins)
-													// NSA_hp_RespawnWaveTime -->  		600		(10mins)
-NSA_gamePrepareTime 	= 60;
-NSA_roundTime 			= 1200;
-NSA_respawnWave 		= 60;
 
 
 while {(NSA_hp_GameState != -1)} do {
 	sleep 2;
-
-	[NSA_gamePrepareTime, NSA_roundTime, NSA_respawnWave] spawn NSA_hp_init_newRound;
-	
+	diag_log format ["testCRASH: 1"];	// testing
+	[(_this select 0), (_this select 1), (_this select 2)] spawn NSA_hp_init_newRound;
+	diag_log format ["testCRASH: 2"];	// testing
 	waitUntil {
 		sleep 1.04;
 		
 		(NSA_hp_roundTime > 0)
 	};
+	diag_log format ["testCRASH: 3"];	// testing
 	
 	waitUntil {
 		sleep 1.04;
 		
+		// hint format ["wave:\n%1\n%2",NSA_hp_RespawnWave, ["hp_respWaveTime", "getTime"] call NSA_Timer];
 		NSA_hp_RespawnWave set [1, ["hp_respWaveTime", "getTime"] call NSA_Timer ];
 		NSA_hp_roundTime  = ["hp_roundTime", "getTime"] call NSA_Timer;
-
+		
+		
 		if ((NSA_hp_RespawnWave select 1) <= 0) then {
 			publicVariable "NSA_hp_RespawnWave";
+			["hp_respWaveTime", "delete"] call NSA_Timer;
 			
-			[NSA_respawnWave] call NSA_hp_init_respawnWave;	// Î÷èñòêà îáúåêòîâ âàëÿþùèõñÿ íà çåìëå, ðåñïàâí ñîëäàò è òåõíèêè, íîâûé òàéìåð ñëåäóþùåé âîëíû.
+			sleep 5;
+			waitUntil {sleep 0.2; (["hp_respWaveTime", "getTime"] call NSA_Timer) < 0 };
+			
+			[(_this select 2)] call NSA_hp_init_respawnWave;	// Ð¾Ñ‡Ð¸ÑÑ‚ÐºÐ° Ð¾Ð±ÑŠÐµÐºÑ‚Ð¾Ð² Ð²Ð°Ð»Â¤ÑŽÑ‰Ð¸Ñ…ÑÂ¤ Ð½Ð° Ð·ÐµÐ¼Ð»Ðµ, Ñ€ÐµÑÐ¿Ð°Ð²Ð½ ÑÐ¾Ð»Ð´Ð°Ñ‚ Ð¸ Ñ‚ÐµÑ…Ð½Ð¸ÐºÐ¸, Ð½Ð¾Ð²Ñ‹Ð¹ Ñ‚Ð°Ð¹Ð¼ÐµÑ€ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐ¹ Ð²Ð¾Ð»Ð½Ñ‹.
+			
 		};
 		
 		(NSA_hp_roundTime <= 0)
